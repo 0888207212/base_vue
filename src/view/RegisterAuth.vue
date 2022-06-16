@@ -1,10 +1,10 @@
 <template>
-  <div id="login">
+  <div id="register">
     <div class="container">
       <div class="d-flex justify-content-center h-100">
         <div class="card">
           <div class="card-header">
-            <h3 style="float: left">Sign In</h3>
+            <h3 style="float: left">Sign Up</h3>
             <div class="d-flex justify-content-end social_icon">
               <span><i class="fab fa-facebook-square"></i></span>
               <span><i class="fab fa-google-plus-square"></i></span>
@@ -28,6 +28,14 @@
               <div class="input-group form-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"
+                    ><i class="fa fa-envelope" aria-hidden="true"></i
+                  ></span>
+                </div>
+                <input type="email" class="form-control" placeholder="email" />
+              </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
                     ><i class="fas fa-key"></i
                   ></span>
                 </div>
@@ -35,7 +43,18 @@
                   type="password"
                   class="form-control"
                   placeholder="password"
-                  id="passWord"
+                />
+              </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    ><i class="fas fa-key"></i
+                  ></span>
+                </div>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="confirm password"
                 />
               </div>
               <div class="form-group" style="padding-top: 16px">
@@ -49,9 +68,9 @@
           </div>
           <div class="card-footer">
             <div class="d-flex justify-content-center links">
-              Don't have an account?
-              <router-link :to="{ name: 'Register', param: {} }">
-                <a>Sign Up</a>
+              Have an account
+              <router-link :to="{ name: 'Login', param: {} }">
+                <a>Sign In</a>
               </router-link>
             </div>
             <div class="d-flex justify-content-center">
@@ -68,103 +87,19 @@
 
 <script>
 export default {
-  name: "LoginAuth",
+  name: "RegisterAuth",
   components: {},
-  methods: {},
 };
 </script>
 
-<style>
-#login {
+<style scoped>
+#register {
   width: 100%;
   height: 100%;
 }
 
-/* Made with love by Mutiullah Samim*/
-@import url("https://fonts.googleapis.com/css?family=Numans");
-
-html,
-body {
-  background-image: url("http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-  font-family: "Numans", sans-serif;
-}
-
-.container {
-  height: 100%;
-  align-content: center;
-}
-
 .card {
-  height: 370px;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 400px;
-  background-color: rgba(0, 0, 0, 0.5) !important;
-}
-
-.social_icon span {
-  font-size: 60px;
-  margin-left: 10px;
-  color: #ffc312;
-}
-
-.social_icon span:hover {
-  color: white;
-  cursor: pointer;
-}
-
-.card-header h3 {
-  color: white;
-}
-
-.social_icon {
-  position: absolute;
-  right: 20px;
-  top: -45px;
-}
-
-.input-group-prepend span {
-  width: 50px;
-  background-color: #ffc312;
-  color: black;
-  border: 0 !important;
-}
-
-input:focus {
-  outline: 0 0 0 0 !important;
-  box-shadow: 0 0 0 0 !important;
-}
-
-.remember {
-  color: white;
-}
-
-.remember input {
-  width: 20px;
-  height: 20px;
-  margin-left: 15px;
-  margin-right: 5px;
-}
-
-.login_btn {
-  color: black;
-  background-color: #ffc312 !important;
-  width: 100px;
-}
-
-.login_btn:hover {
-  color: black;
-  background-color: white !important;
-}
-
-.links {
-  color: white;
-}
-
-.links a {
-  margin-left: 4px;
+  height: 470px;
+  display: flex;
 }
 </style>
